@@ -28,15 +28,15 @@ namespace HMS
 
         public UserScreen()
         {
-            clearData();
-             selectedIndex = "";
-            selectedPwd = "";
+            //clearData();
+            // selectedIndex = "";
+            //selectedPwd = "";
             InitializeComponent();
-            GetData();
-            if (ListID.Count > 0)
-            {
-                updateDatagrid();
-            }
+            //GetData();
+            //if (ListID.Count > 0)
+            //{
+            //    updateDatagrid();
+            //}
 
         }
 

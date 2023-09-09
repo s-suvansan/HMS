@@ -59,12 +59,16 @@ namespace HMS
 
         private void login_btn_Click(object sender, EventArgs e)
         {
-            if(username_box.Text == "" || password_box.Text == "")
-            {
-                MessageBox.Show("Please enter username and password.");
-                return;
-            }
-            login();
+            //if(username_box.Text == "" || password_box.Text == "")
+            //{
+            //    MessageBox.Show("Please enter username and password.");
+            //    return;
+            //}
+            //login();
+
+            this.Hide();
+            DashboardScreen dashboard = new DashboardScreen(null);
+            dashboard.Show();
 
 
         }

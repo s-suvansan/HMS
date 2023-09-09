@@ -24,17 +24,17 @@ namespace HMS
 
         public DashboardScreen(MySqlDataReader data)
         {
-            while (data.Read())
-            {
+            //while (data.Read())
+            //{
                 InitializeComponent();
-                name_lbl.Text = data["FirstName"].ToString() + " " + data["LastName"].ToString();
-                role_lbl.Text = data["Role"].ToString();
-                user_btn.Hide();
-                if (role_lbl.Text == "Admin")
-                {
-                    user_btn.Show();
-                }
-            }
+            //    name_lbl.Text = data["FirstName"].ToString() + " " + data["LastName"].ToString();
+            //    role_lbl.Text = data["Role"].ToString();
+            //    user_btn.Hide();
+            //    if (role_lbl.Text == "Admin")
+            //    {
+            //        user_btn.Show();
+            //    }
+            //}
         }
 
 

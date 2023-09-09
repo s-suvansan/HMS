@@ -32,16 +32,16 @@ namespace HMS
 
         public DoctorScreen()
         {
-            clearData();
-          selectedIndex = "";
+          //  clearData();
+          //selectedIndex = "";
         InitializeComponent();
 
 
-            GetData();
-            if (ListID.Count > 0)
-            {
-                updateDatagrid();
-            }
+            //GetData();
+            //if (ListID.Count > 0)
+            //{
+            //    updateDatagrid();
+            //}
 
         }
 
