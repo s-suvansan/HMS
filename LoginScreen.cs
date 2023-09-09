@@ -16,15 +16,23 @@ namespace HMS
     public partial class LoginScreen : Form
     {
         DBConnection con = new DBConnection();
-        public LoginScreen()
+        public LoginScreen(bool isNeedSplash)
         {
-            Thread t = new Thread(new ThreadStart(StartForm));
-            t.Start();
-            Thread.Sleep(15000);
-            InitializeComponent();
-            t.Abort();
+            if (isNeedSplash == true)
+            {
+                Thread t = new Thread(new ThreadStart(StartForm));
+                t.Start();
+                Thread.Sleep(5000);
+                InitializeComponent();
+                t.Abort();
+            }
+            else
+            {
+                InitializeComponent();
 
-            
+            }
+
+
 
         }
 

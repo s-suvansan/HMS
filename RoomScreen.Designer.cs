@@ -221,7 +221,7 @@ namespace HMS
             this.gender_box.Items.AddRange(new object[] {
             "Male",
             "Female"});
-            this.gender_box.Location = new System.Drawing.Point(145, 196);
+            this.gender_box.Location = new System.Drawing.Point(145, 197);
             this.gender_box.Name = "gender_box";
             this.gender_box.Size = new System.Drawing.Size(365, 28);
             this.gender_box.TabIndex = 14;

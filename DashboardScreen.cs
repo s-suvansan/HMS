@@ -89,6 +89,8 @@ namespace HMS
             if(result == DialogResult.Yes)
             {
                 this.Close();
+                LoginScreen loginScreen = new LoginScreen(false);
+                loginScreen.Show();
             }
         }
 

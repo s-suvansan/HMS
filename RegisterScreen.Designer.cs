@@ -30,22 +30,22 @@ namespace HMS
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(RegisterScreen));
-            this.login_btn = new System.Windows.Forms.Button();
+            this.signup_btn = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.richTextBox3 = new System.Windows.Forms.RichTextBox();
+            this.con_pwd_box = new System.Windows.Forms.RichTextBox();
             this.label4 = new System.Windows.Forms.Label();
-            this.richTextBox1 = new System.Windows.Forms.RichTextBox();
+            this.fn_box = new System.Windows.Forms.RichTextBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.richTextBox2 = new System.Windows.Forms.RichTextBox();
+            this.ln_box = new System.Windows.Forms.RichTextBox();
             this.label3 = new System.Windows.Forms.Label();
-            this.richTextBox4 = new System.Windows.Forms.RichTextBox();
+            this.user_box = new System.Windows.Forms.RichTextBox();
             this.label5 = new System.Windows.Forms.Label();
-            this.richTextBox5 = new System.Windows.Forms.RichTextBox();
+            this.pwd_box = new System.Windows.Forms.RichTextBox();
             this.label6 = new System.Windows.Forms.Label();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.role_box = new System.Windows.Forms.ComboBox();
             this.label8 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -53,17 +53,18 @@ namespace HMS
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
-            // login_btn
+            // signup_btn
             // 
-            this.login_btn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(128)))), ((int)(((byte)(157)))));
-            this.login_btn.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.login_btn.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.login_btn.Location = new System.Drawing.Point(161, 600);
-            this.login_btn.Name = "login_btn";
-            this.login_btn.Size = new System.Drawing.Size(279, 49);
-            this.login_btn.TabIndex = 3;
-            this.login_btn.Text = "SignUp";
-            this.login_btn.UseVisualStyleBackColor = false;
+            this.signup_btn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(128)))), ((int)(((byte)(157)))));
+            this.signup_btn.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.signup_btn.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.signup_btn.Location = new System.Drawing.Point(161, 600);
+            this.signup_btn.Name = "signup_btn";
+            this.signup_btn.Size = new System.Drawing.Size(279, 49);
+            this.signup_btn.TabIndex = 3;
+            this.signup_btn.Text = "SignUp";
+            this.signup_btn.UseVisualStyleBackColor = false;
+            this.signup_btn.Click += new System.EventHandler(this.signup_btn_Click);
             // 
             // label2
             // 
@@ -92,19 +93,18 @@ namespace HMS
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 12;
             this.pictureBox1.TabStop = false;
-            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
-            // richTextBox3
+            // con_pwd_box
             // 
-            this.richTextBox3.BackColor = System.Drawing.Color.White;
-            this.richTextBox3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.richTextBox3.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F);
-            this.richTextBox3.Location = new System.Drawing.Point(161, 473);
-            this.richTextBox3.Multiline = false;
-            this.richTextBox3.Name = "richTextBox3";
-            this.richTextBox3.Size = new System.Drawing.Size(279, 40);
-            this.richTextBox3.TabIndex = 18;
-            this.richTextBox3.Text = "";
+            this.con_pwd_box.BackColor = System.Drawing.Color.White;
+            this.con_pwd_box.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.con_pwd_box.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F);
+            this.con_pwd_box.Location = new System.Drawing.Point(161, 473);
+            this.con_pwd_box.Multiline = false;
+            this.con_pwd_box.Name = "con_pwd_box";
+            this.con_pwd_box.Size = new System.Drawing.Size(279, 40);
+            this.con_pwd_box.TabIndex = 18;
+            this.con_pwd_box.Text = "";
             // 
             // label4
             // 
@@ -118,18 +118,17 @@ namespace HMS
             this.label4.TabIndex = 19;
             this.label4.Text = "Confirm Password";
             // 
-            // richTextBox1
+            // fn_box
             // 
-            this.richTextBox1.BackColor = System.Drawing.Color.White;
-            this.richTextBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.richTextBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F);
-            this.richTextBox1.Location = new System.Drawing.Point(161, 180);
-            this.richTextBox1.Multiline = false;
-            this.richTextBox1.Name = "richTextBox1";
-            this.richTextBox1.Size = new System.Drawing.Size(279, 40);
-            this.richTextBox1.TabIndex = 20;
-            this.richTextBox1.Text = "";
-            this.richTextBox1.TextChanged += new System.EventHandler(this.richTextBox1_TextChanged);
+            this.fn_box.BackColor = System.Drawing.Color.White;
+            this.fn_box.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.fn_box.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F);
+            this.fn_box.Location = new System.Drawing.Point(161, 180);
+            this.fn_box.Multiline = false;
+            this.fn_box.Name = "fn_box";
+            this.fn_box.Size = new System.Drawing.Size(279, 40);
+            this.fn_box.TabIndex = 20;
+            this.fn_box.Text = "";
             // 
             // label1
             // 
@@ -142,19 +141,18 @@ namespace HMS
             this.label1.Size = new System.Drawing.Size(93, 20);
             this.label1.TabIndex = 21;
             this.label1.Text = "Firstname";
-            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
-            // richTextBox2
+            // ln_box
             // 
-            this.richTextBox2.BackColor = System.Drawing.Color.White;
-            this.richTextBox2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.richTextBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F);
-            this.richTextBox2.Location = new System.Drawing.Point(160, 254);
-            this.richTextBox2.Multiline = false;
-            this.richTextBox2.Name = "richTextBox2";
-            this.richTextBox2.Size = new System.Drawing.Size(279, 40);
-            this.richTextBox2.TabIndex = 22;
-            this.richTextBox2.Text = "";
+            this.ln_box.BackColor = System.Drawing.Color.White;
+            this.ln_box.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.ln_box.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F);
+            this.ln_box.Location = new System.Drawing.Point(160, 254);
+            this.ln_box.Multiline = false;
+            this.ln_box.Name = "ln_box";
+            this.ln_box.Size = new System.Drawing.Size(279, 40);
+            this.ln_box.TabIndex = 22;
+            this.ln_box.Text = "";
             // 
             // label3
             // 
@@ -168,17 +166,17 @@ namespace HMS
             this.label3.TabIndex = 23;
             this.label3.Text = "Lastname";
             // 
-            // richTextBox4
+            // user_box
             // 
-            this.richTextBox4.BackColor = System.Drawing.Color.White;
-            this.richTextBox4.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.richTextBox4.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F);
-            this.richTextBox4.Location = new System.Drawing.Point(160, 326);
-            this.richTextBox4.Multiline = false;
-            this.richTextBox4.Name = "richTextBox4";
-            this.richTextBox4.Size = new System.Drawing.Size(279, 40);
-            this.richTextBox4.TabIndex = 26;
-            this.richTextBox4.Text = "";
+            this.user_box.BackColor = System.Drawing.Color.White;
+            this.user_box.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.user_box.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F);
+            this.user_box.Location = new System.Drawing.Point(160, 326);
+            this.user_box.Multiline = false;
+            this.user_box.Name = "user_box";
+            this.user_box.Size = new System.Drawing.Size(279, 40);
+            this.user_box.TabIndex = 26;
+            this.user_box.Text = "";
             // 
             // label5
             // 
@@ -192,17 +190,17 @@ namespace HMS
             this.label5.TabIndex = 27;
             this.label5.Text = "Username";
             // 
-            // richTextBox5
+            // pwd_box
             // 
-            this.richTextBox5.BackColor = System.Drawing.Color.White;
-            this.richTextBox5.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.richTextBox5.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F);
-            this.richTextBox5.Location = new System.Drawing.Point(160, 398);
-            this.richTextBox5.Multiline = false;
-            this.richTextBox5.Name = "richTextBox5";
-            this.richTextBox5.Size = new System.Drawing.Size(279, 40);
-            this.richTextBox5.TabIndex = 24;
-            this.richTextBox5.Text = "";
+            this.pwd_box.BackColor = System.Drawing.Color.White;
+            this.pwd_box.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.pwd_box.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F);
+            this.pwd_box.Location = new System.Drawing.Point(160, 398);
+            this.pwd_box.Multiline = false;
+            this.pwd_box.Name = "pwd_box";
+            this.pwd_box.Size = new System.Drawing.Size(279, 40);
+            this.pwd_box.TabIndex = 24;
+            this.pwd_box.Text = "";
             // 
             // label6
             // 
@@ -232,37 +230,36 @@ namespace HMS
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.White;
-            this.panel1.Controls.Add(this.comboBox1);
+            this.panel1.Controls.Add(this.role_box);
             this.panel1.Controls.Add(this.label8);
             this.panel1.Controls.Add(this.label7);
             this.panel1.Controls.Add(this.label1);
-            this.panel1.Controls.Add(this.richTextBox4);
-            this.panel1.Controls.Add(this.login_btn);
+            this.panel1.Controls.Add(this.user_box);
+            this.panel1.Controls.Add(this.signup_btn);
             this.panel1.Controls.Add(this.label5);
-            this.panel1.Controls.Add(this.richTextBox1);
-            this.panel1.Controls.Add(this.richTextBox5);
+            this.panel1.Controls.Add(this.fn_box);
+            this.panel1.Controls.Add(this.pwd_box);
             this.panel1.Controls.Add(this.label3);
             this.panel1.Controls.Add(this.label6);
-            this.panel1.Controls.Add(this.richTextBox2);
-            this.panel1.Controls.Add(this.richTextBox3);
+            this.panel1.Controls.Add(this.ln_box);
+            this.panel1.Controls.Add(this.con_pwd_box);
             this.panel1.Controls.Add(this.label4);
             this.panel1.Location = new System.Drawing.Point(471, 1);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(579, 661);
             this.panel1.TabIndex = 32;
-            this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
-            // comboBox1
+            // role_box
             // 
-            this.comboBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F);
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Items.AddRange(new object[] {
+            this.role_box.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F);
+            this.role_box.FormattingEnabled = true;
+            this.role_box.Items.AddRange(new object[] {
             "Admin",
-            "Staff"});
-            this.comboBox1.Location = new System.Drawing.Point(161, 114);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(279, 37);
-            this.comboBox1.TabIndex = 36;
+            "User"});
+            this.role_box.Location = new System.Drawing.Point(161, 114);
+            this.role_box.Name = "role_box";
+            this.role_box.Size = new System.Drawing.Size(279, 37);
+            this.role_box.TabIndex = 36;
             // 
             // label8
             // 
@@ -307,7 +304,6 @@ namespace HMS
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Login";
             this.TopMost = true;
-            this.Load += new System.EventHandler(this.RegisterScreen_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.panel1.ResumeLayout(false);
@@ -317,23 +313,23 @@ namespace HMS
         }
 
         #endregion
-        private System.Windows.Forms.Button login_btn;
+        private System.Windows.Forms.Button signup_btn;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.RichTextBox richTextBox3;
+        private System.Windows.Forms.RichTextBox con_pwd_box;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.RichTextBox richTextBox1;
+        private System.Windows.Forms.RichTextBox fn_box;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.RichTextBox richTextBox2;
+        private System.Windows.Forms.RichTextBox ln_box;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.RichTextBox richTextBox4;
+        private System.Windows.Forms.RichTextBox user_box;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.RichTextBox richTextBox5;
+        private System.Windows.Forms.RichTextBox pwd_box;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.ComboBox role_box;
         private System.Windows.Forms.Label label8;
     }
 }

@@ -32,9 +32,11 @@ namespace HMS
 
         public DoctorScreen()
         {
-            InitializeComponent();
+            clearData();
+          selectedIndex = "";
+        InitializeComponent();
 
-            // Create a material theme manager and add the form to manage (this)
+
             GetData();
             if (ListID.Count > 0)
             {
