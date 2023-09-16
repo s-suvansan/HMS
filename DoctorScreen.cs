@@ -33,8 +33,8 @@ namespace HMS
         public DoctorScreen()
         {
             clearData();
-          selectedIndex = "";
-        InitializeComponent();
+            selectedIndex = "";
+            InitializeComponent();
 
 
             GetData();

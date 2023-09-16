@@ -38,22 +38,22 @@ namespace HMS
             this.ContactNumber = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Email = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Gender = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Specialization = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.DOB = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
             this.label6 = new System.Windows.Forms.Label();
-            this.textBox5 = new System.Windows.Forms.TextBox();
+            this.phn_box = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
-            this.textBox4 = new System.Windows.Forms.TextBox();
+            this.mail_box = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
-            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.address_box = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.ln_box = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.fn_box = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
             this.gender_box = new System.Windows.Forms.ComboBox();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
+            this.dob_box = new System.Windows.Forms.DateTimePicker();
             this.tableLayoutPanel3 = new System.Windows.Forms.TableLayoutPanel();
             this.button4 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
@@ -121,7 +121,7 @@ namespace HMS
             this.ContactNumber,
             this.Email,
             this.Gender,
-            this.Specialization});
+            this.DOB});
             this.dataGridView1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dataGridView1.Location = new System.Drawing.Point(3, 260);
             this.dataGridView1.Name = "dataGridView1";
@@ -129,6 +129,7 @@ namespace HMS
             this.dataGridView1.RowTemplate.Height = 24;
             this.dataGridView1.Size = new System.Drawing.Size(1137, 379);
             this.dataGridView1.TabIndex = 18;
+            this.dataGridView1.RowHeaderMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dataGridView1_RowHeaderMouseClick_1);
             // 
             // Firstname
             // 
@@ -172,12 +173,12 @@ namespace HMS
             this.Gender.Name = "Gender";
             this.Gender.Width = 125;
             // 
-            // Specialization
+            // DOB
             // 
-            this.Specialization.HeaderText = "DOB";
-            this.Specialization.MinimumWidth = 6;
-            this.Specialization.Name = "Specialization";
-            this.Specialization.Width = 125;
+            this.DOB.HeaderText = "DOB";
+            this.DOB.MinimumWidth = 6;
+            this.DOB.Name = "DOB";
+            this.DOB.Width = 125;
             // 
             // tableLayoutPanel2
             // 
@@ -188,19 +189,19 @@ namespace HMS
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 12.5F));
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 37.5F));
             this.tableLayoutPanel2.Controls.Add(this.label6, 0, 3);
-            this.tableLayoutPanel2.Controls.Add(this.textBox5, 1, 2);
+            this.tableLayoutPanel2.Controls.Add(this.phn_box, 1, 2);
             this.tableLayoutPanel2.Controls.Add(this.label5, 0, 2);
-            this.tableLayoutPanel2.Controls.Add(this.textBox4, 3, 1);
+            this.tableLayoutPanel2.Controls.Add(this.mail_box, 3, 1);
             this.tableLayoutPanel2.Controls.Add(this.label4, 2, 1);
-            this.tableLayoutPanel2.Controls.Add(this.textBox3, 1, 1);
+            this.tableLayoutPanel2.Controls.Add(this.address_box, 1, 1);
             this.tableLayoutPanel2.Controls.Add(this.label3, 0, 1);
-            this.tableLayoutPanel2.Controls.Add(this.textBox2, 3, 0);
+            this.tableLayoutPanel2.Controls.Add(this.ln_box, 3, 0);
             this.tableLayoutPanel2.Controls.Add(this.label2, 2, 0);
             this.tableLayoutPanel2.Controls.Add(this.label1, 0, 0);
-            this.tableLayoutPanel2.Controls.Add(this.textBox1, 1, 0);
+            this.tableLayoutPanel2.Controls.Add(this.fn_box, 1, 0);
             this.tableLayoutPanel2.Controls.Add(this.label7, 2, 2);
             this.tableLayoutPanel2.Controls.Add(this.gender_box, 3, 2);
-            this.tableLayoutPanel2.Controls.Add(this.dateTimePicker1, 1, 3);
+            this.tableLayoutPanel2.Controls.Add(this.dob_box, 1, 3);
             this.tableLayoutPanel2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel2.Location = new System.Drawing.Point(3, 3);
             this.tableLayoutPanel2.Name = "tableLayoutPanel2";
@@ -222,13 +223,13 @@ namespace HMS
             this.label6.TabIndex = 17;
             this.label6.Text = "DOB";
             // 
-            // textBox5
+            // phn_box
             // 
-            this.textBox5.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.textBox5.Location = new System.Drawing.Point(145, 141);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(365, 27);
-            this.textBox5.TabIndex = 9;
+            this.phn_box.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.phn_box.Location = new System.Drawing.Point(145, 141);
+            this.phn_box.Name = "phn_box";
+            this.phn_box.Size = new System.Drawing.Size(365, 27);
+            this.phn_box.TabIndex = 9;
             // 
             // label5
             // 
@@ -240,13 +241,13 @@ namespace HMS
             this.label5.TabIndex = 8;
             this.label5.Text = "Contact Number";
             // 
-            // textBox4
+            // mail_box
             // 
-            this.textBox4.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.textBox4.Location = new System.Drawing.Point(713, 79);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(365, 27);
-            this.textBox4.TabIndex = 7;
+            this.mail_box.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.mail_box.Location = new System.Drawing.Point(713, 79);
+            this.mail_box.Name = "mail_box";
+            this.mail_box.Size = new System.Drawing.Size(365, 27);
+            this.mail_box.TabIndex = 7;
             // 
             // label4
             // 
@@ -258,13 +259,13 @@ namespace HMS
             this.label4.TabIndex = 6;
             this.label4.Text = "Email";
             // 
-            // textBox3
+            // address_box
             // 
-            this.textBox3.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.textBox3.Location = new System.Drawing.Point(145, 79);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(365, 27);
-            this.textBox3.TabIndex = 5;
+            this.address_box.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.address_box.Location = new System.Drawing.Point(145, 79);
+            this.address_box.Name = "address_box";
+            this.address_box.Size = new System.Drawing.Size(365, 27);
+            this.address_box.TabIndex = 5;
             // 
             // label3
             // 
@@ -276,13 +277,13 @@ namespace HMS
             this.label3.TabIndex = 4;
             this.label3.Text = "Address";
             // 
-            // textBox2
+            // ln_box
             // 
-            this.textBox2.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.textBox2.Location = new System.Drawing.Point(713, 17);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(365, 27);
-            this.textBox2.TabIndex = 3;
+            this.ln_box.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.ln_box.Location = new System.Drawing.Point(713, 17);
+            this.ln_box.Name = "ln_box";
+            this.ln_box.Size = new System.Drawing.Size(365, 27);
+            this.ln_box.TabIndex = 3;
             // 
             // label2
             // 
@@ -304,13 +305,13 @@ namespace HMS
             this.label1.TabIndex = 0;
             this.label1.Text = "Firstname";
             // 
-            // textBox1
+            // fn_box
             // 
-            this.textBox1.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.textBox1.Location = new System.Drawing.Point(145, 17);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(365, 27);
-            this.textBox1.TabIndex = 1;
+            this.fn_box.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.fn_box.Location = new System.Drawing.Point(145, 17);
+            this.fn_box.Name = "fn_box";
+            this.fn_box.Size = new System.Drawing.Size(365, 27);
+            this.fn_box.TabIndex = 1;
             // 
             // label7
             // 
@@ -334,13 +335,13 @@ namespace HMS
             this.gender_box.Size = new System.Drawing.Size(365, 28);
             this.gender_box.TabIndex = 15;
             // 
-            // dateTimePicker1
+            // dob_box
             // 
-            this.dateTimePicker1.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.dateTimePicker1.Location = new System.Drawing.Point(145, 205);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(365, 27);
-            this.dateTimePicker1.TabIndex = 16;
+            this.dob_box.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.dob_box.Location = new System.Drawing.Point(145, 205);
+            this.dob_box.Name = "dob_box";
+            this.dob_box.Size = new System.Drawing.Size(365, 27);
+            this.dob_box.TabIndex = 16;
             // 
             // tableLayoutPanel3
             // 
@@ -374,6 +375,7 @@ namespace HMS
             this.button4.TabIndex = 3;
             this.button4.Text = "Clear";
             this.button4.UseVisualStyleBackColor = false;
+            this.button4.Click += new System.EventHandler(this.button4_Click);
             // 
             // button3
             // 
@@ -387,6 +389,7 @@ namespace HMS
             this.button3.TabIndex = 2;
             this.button3.Text = "Delete";
             this.button3.UseVisualStyleBackColor = false;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
             // button2
             // 
@@ -400,6 +403,7 @@ namespace HMS
             this.button2.TabIndex = 1;
             this.button2.Text = "Edit";
             this.button2.UseVisualStyleBackColor = false;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // button1
             // 
@@ -413,6 +417,7 @@ namespace HMS
             this.button1.TabIndex = 0;
             this.button1.Text = "Add";
             this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // PatientScreen
             // 
@@ -442,13 +447,13 @@ namespace HMS
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel2;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel3;
-        private System.Windows.Forms.TextBox textBox5;
+        private System.Windows.Forms.TextBox phn_box;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.TextBox textBox4;
+        private System.Windows.Forms.TextBox mail_box;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.TextBox address_box;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox ln_box;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Button button4;
         private System.Windows.Forms.Button button3;
@@ -457,16 +462,16 @@ namespace HMS
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.ComboBox gender_box;
-        private System.Windows.Forms.DateTimePicker dateTimePicker1;
+        private System.Windows.Forms.DateTimePicker dob_box;
         private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.TextBox fn_box;
         private System.Windows.Forms.DataGridViewTextBoxColumn Firstname;
         private System.Windows.Forms.DataGridViewTextBoxColumn Lastname;
         private System.Windows.Forms.DataGridViewTextBoxColumn Address;
         private System.Windows.Forms.DataGridViewTextBoxColumn ContactNumber;
         private System.Windows.Forms.DataGridViewTextBoxColumn Email;
         private System.Windows.Forms.DataGridViewTextBoxColumn Gender;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Specialization;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn DOB;
     }
 }

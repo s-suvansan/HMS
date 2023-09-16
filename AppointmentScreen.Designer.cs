@@ -35,21 +35,21 @@ namespace HMS
             this.button3 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
+            this.appoint_date_box = new System.Windows.Forms.DateTimePicker();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
             this.label6 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
-            this.gender_box = new System.Windows.Forms.ComboBox();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.comboBox2 = new System.Windows.Forms.ComboBox();
+            this.status_box = new System.Windows.Forms.ComboBox();
+            this.doc_box = new System.Windows.Forms.ComboBox();
+            this.patient_box = new System.Windows.Forms.ComboBox();
             this.tableLayoutPanel3 = new System.Windows.Forms.TableLayoutPanel();
             this.dataGridView2 = new System.Windows.Forms.DataGridView();
             this.doctor_group = new System.Windows.Forms.GroupBox();
-            this.Firstname = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Lastname = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Address = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ContactNumber = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Doctor = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Patient = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Date = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Status = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tableLayoutPanel1.SuspendLayout();
             this.tableLayoutPanel2.SuspendLayout();
             this.tableLayoutPanel3.SuspendLayout();
@@ -129,13 +129,13 @@ namespace HMS
             this.label1.TabIndex = 0;
             this.label1.Text = "Doctor";
             // 
-            // dateTimePicker1
+            // appoint_date_box
             // 
-            this.dateTimePicker1.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.dateTimePicker1.Location = new System.Drawing.Point(145, 175);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(365, 27);
-            this.dateTimePicker1.TabIndex = 16;
+            this.appoint_date_box.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.appoint_date_box.Location = new System.Drawing.Point(145, 175);
+            this.appoint_date_box.Name = "appoint_date_box";
+            this.appoint_date_box.Size = new System.Drawing.Size(365, 27);
+            this.appoint_date_box.TabIndex = 16;
             // 
             // tableLayoutPanel1
             // 
@@ -166,11 +166,11 @@ namespace HMS
             this.tableLayoutPanel2.Controls.Add(this.label2, 2, 0);
             this.tableLayoutPanel2.Controls.Add(this.label1, 0, 0);
             this.tableLayoutPanel2.Controls.Add(this.label6, 0, 1);
-            this.tableLayoutPanel2.Controls.Add(this.dateTimePicker1, 1, 1);
+            this.tableLayoutPanel2.Controls.Add(this.appoint_date_box, 1, 1);
             this.tableLayoutPanel2.Controls.Add(this.label3, 2, 1);
-            this.tableLayoutPanel2.Controls.Add(this.gender_box, 3, 1);
-            this.tableLayoutPanel2.Controls.Add(this.comboBox1, 1, 0);
-            this.tableLayoutPanel2.Controls.Add(this.comboBox2, 3, 0);
+            this.tableLayoutPanel2.Controls.Add(this.status_box, 3, 1);
+            this.tableLayoutPanel2.Controls.Add(this.doc_box, 1, 0);
+            this.tableLayoutPanel2.Controls.Add(this.patient_box, 3, 0);
             this.tableLayoutPanel2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel2.Location = new System.Drawing.Point(3, 3);
             this.tableLayoutPanel2.Name = "tableLayoutPanel2";
@@ -200,41 +200,41 @@ namespace HMS
             this.label3.TabIndex = 19;
             this.label3.Text = "Status";
             // 
-            // gender_box
+            // status_box
             // 
-            this.gender_box.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.gender_box.FormattingEnabled = true;
-            this.gender_box.Items.AddRange(new object[] {
+            this.status_box.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.status_box.FormattingEnabled = true;
+            this.status_box.Items.AddRange(new object[] {
             "Scheduled",
             "Unscheduled"});
-            this.gender_box.Location = new System.Drawing.Point(715, 175);
-            this.gender_box.Name = "gender_box";
-            this.gender_box.Size = new System.Drawing.Size(365, 28);
-            this.gender_box.TabIndex = 15;
+            this.status_box.Location = new System.Drawing.Point(715, 176);
+            this.status_box.Name = "status_box";
+            this.status_box.Size = new System.Drawing.Size(365, 28);
+            this.status_box.TabIndex = 15;
             // 
-            // comboBox1
+            // doc_box
             // 
-            this.comboBox1.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Items.AddRange(new object[] {
+            this.doc_box.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.doc_box.FormattingEnabled = true;
+            this.doc_box.Items.AddRange(new object[] {
             "Scheduled",
             "Unscheduled"});
-            this.comboBox1.Location = new System.Drawing.Point(145, 49);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(365, 28);
-            this.comboBox1.TabIndex = 20;
+            this.doc_box.Location = new System.Drawing.Point(145, 50);
+            this.doc_box.Name = "doc_box";
+            this.doc_box.Size = new System.Drawing.Size(365, 28);
+            this.doc_box.TabIndex = 20;
             // 
-            // comboBox2
+            // patient_box
             // 
-            this.comboBox2.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.comboBox2.FormattingEnabled = true;
-            this.comboBox2.Items.AddRange(new object[] {
+            this.patient_box.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.patient_box.FormattingEnabled = true;
+            this.patient_box.Items.AddRange(new object[] {
             "Scheduled",
             "Unscheduled"});
-            this.comboBox2.Location = new System.Drawing.Point(715, 49);
-            this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Size = new System.Drawing.Size(365, 28);
-            this.comboBox2.TabIndex = 21;
+            this.patient_box.Location = new System.Drawing.Point(715, 50);
+            this.patient_box.Name = "patient_box";
+            this.patient_box.Size = new System.Drawing.Size(365, 28);
+            this.patient_box.TabIndex = 21;
             // 
             // tableLayoutPanel3
             // 
@@ -261,10 +261,10 @@ namespace HMS
             this.dataGridView2.BackgroundColor = System.Drawing.Color.WhiteSmoke;
             this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView2.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.Firstname,
-            this.Lastname,
-            this.Address,
-            this.ContactNumber});
+            this.Doctor,
+            this.Patient,
+            this.Date,
+            this.Status});
             this.dataGridView2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dataGridView2.Location = new System.Drawing.Point(3, 261);
             this.dataGridView2.Name = "dataGridView2";
@@ -288,33 +288,33 @@ namespace HMS
             this.doctor_group.TabStop = false;
             this.doctor_group.Text = "Appoinments";
             // 
-            // Firstname
+            // Doctor
             // 
-            this.Firstname.HeaderText = "Doctor";
-            this.Firstname.MinimumWidth = 6;
-            this.Firstname.Name = "Firstname";
-            this.Firstname.Width = 125;
+            this.Doctor.HeaderText = "Doctor";
+            this.Doctor.MinimumWidth = 6;
+            this.Doctor.Name = "Doctor";
+            this.Doctor.Width = 125;
             // 
-            // Lastname
+            // Patient
             // 
-            this.Lastname.HeaderText = "Patient";
-            this.Lastname.MinimumWidth = 6;
-            this.Lastname.Name = "Lastname";
-            this.Lastname.Width = 125;
+            this.Patient.HeaderText = "Patient";
+            this.Patient.MinimumWidth = 6;
+            this.Patient.Name = "Patient";
+            this.Patient.Width = 125;
             // 
-            // Address
+            // Date
             // 
-            this.Address.HeaderText = "Appoinment Date";
-            this.Address.MinimumWidth = 6;
-            this.Address.Name = "Address";
-            this.Address.Width = 125;
+            this.Date.HeaderText = "Appoinment Date";
+            this.Date.MinimumWidth = 6;
+            this.Date.Name = "Date";
+            this.Date.Width = 125;
             // 
-            // ContactNumber
+            // Status
             // 
-            this.ContactNumber.HeaderText = "Status";
-            this.ContactNumber.MinimumWidth = 6;
-            this.ContactNumber.Name = "ContactNumber";
-            this.ContactNumber.Width = 125;
+            this.Status.HeaderText = "Status";
+            this.Status.MinimumWidth = 6;
+            this.Status.Name = "Status";
+            this.Status.Width = 125;
             // 
             // AppointmentScreen
             // 
@@ -342,20 +342,20 @@ namespace HMS
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.DateTimePicker dateTimePicker1;
+        private System.Windows.Forms.DateTimePicker appoint_date_box;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel2;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel3;
         private System.Windows.Forms.GroupBox doctor_group;
-        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.ComboBox doc_box;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.ComboBox gender_box;
-        private System.Windows.Forms.ComboBox comboBox2;
+        private System.Windows.Forms.ComboBox status_box;
+        private System.Windows.Forms.ComboBox patient_box;
         private System.Windows.Forms.DataGridView dataGridView2;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Firstname;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Lastname;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Address;
-        private System.Windows.Forms.DataGridViewTextBoxColumn ContactNumber;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Doctor;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Patient;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Date;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Status;
     }
 }

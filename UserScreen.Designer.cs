@@ -202,7 +202,7 @@ namespace HMS
             this.role_box.Items.AddRange(new object[] {
             "Admin",
             "User"});
-            this.role_box.Location = new System.Drawing.Point(715, 175);
+            this.role_box.Location = new System.Drawing.Point(715, 176);
             this.role_box.Name = "role_box";
             this.role_box.Size = new System.Drawing.Size(365, 28);
             this.role_box.TabIndex = 15;

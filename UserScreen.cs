@@ -29,7 +29,7 @@ namespace HMS
         public UserScreen()
         {
             clearData();
-             selectedIndex = "";
+            selectedIndex = "";
             selectedPwd = "";
             InitializeComponent();
             GetData();
