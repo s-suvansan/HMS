@@ -219,9 +219,9 @@ namespace HMS
             this.gender_box.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.gender_box.FormattingEnabled = true;
             this.gender_box.Items.AddRange(new object[] {
-            "Male",
-            "Female"});
-            this.gender_box.Location = new System.Drawing.Point(145, 197);
+            "Occupied",
+            "Available"});
+            this.gender_box.Location = new System.Drawing.Point(145, 196);
             this.gender_box.Name = "gender_box";
             this.gender_box.Size = new System.Drawing.Size(365, 28);
             this.gender_box.TabIndex = 14;

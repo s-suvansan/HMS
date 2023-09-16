@@ -44,7 +44,7 @@ namespace HMS
             this.textBox2 = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.patient_box = new System.Windows.Forms.ComboBox();
             this.label7 = new System.Windows.Forms.Label();
             this.gender_box = new System.Windows.Forms.ComboBox();
             this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
@@ -167,7 +167,7 @@ namespace HMS
             this.tableLayoutPanel2.Controls.Add(this.textBox2, 3, 0);
             this.tableLayoutPanel2.Controls.Add(this.label2, 2, 0);
             this.tableLayoutPanel2.Controls.Add(this.label1, 0, 0);
-            this.tableLayoutPanel2.Controls.Add(this.comboBox1, 1, 0);
+            this.tableLayoutPanel2.Controls.Add(this.patient_box, 1, 0);
             this.tableLayoutPanel2.Controls.Add(this.label7, 2, 1);
             this.tableLayoutPanel2.Controls.Add(this.gender_box, 3, 1);
             this.tableLayoutPanel2.Controls.Add(this.dateTimePicker1, 1, 2);
@@ -239,17 +239,14 @@ namespace HMS
             this.label1.TabIndex = 0;
             this.label1.Text = "Patient";
             // 
-            // comboBox1
+            // patient_box
             // 
-            this.comboBox1.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Items.AddRange(new object[] {
-            "Male",
-            "Female"});
-            this.comboBox1.Location = new System.Drawing.Point(145, 29);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(365, 28);
-            this.comboBox1.TabIndex = 18;
+            this.patient_box.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.patient_box.FormattingEnabled = true;
+            this.patient_box.Location = new System.Drawing.Point(145, 28);
+            this.patient_box.Name = "patient_box";
+            this.patient_box.Size = new System.Drawing.Size(365, 28);
+            this.patient_box.TabIndex = 18;
             // 
             // label7
             // 
@@ -266,9 +263,11 @@ namespace HMS
             this.gender_box.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.gender_box.FormattingEnabled = true;
             this.gender_box.Items.AddRange(new object[] {
-            "Male",
-            "Female"});
-            this.gender_box.Location = new System.Drawing.Point(715, 113);
+            "Once daily",
+            "Twice",
+            "As needed",
+            "Every 8 hours"});
+            this.gender_box.Location = new System.Drawing.Point(715, 112);
             this.gender_box.Name = "gender_box";
             this.gender_box.Size = new System.Drawing.Size(365, 28);
             this.gender_box.TabIndex = 15;
@@ -416,7 +415,7 @@ namespace HMS
         private System.Windows.Forms.TextBox textBox2;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.ComboBox patient_box;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.ComboBox gender_box;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel3;

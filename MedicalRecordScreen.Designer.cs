@@ -42,7 +42,7 @@ namespace HMS
             this.textBox2 = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.patient_box = new System.Windows.Forms.ComboBox();
             this.label7 = new System.Windows.Forms.Label();
             this.gender_box = new System.Windows.Forms.ComboBox();
             this.doctor_group = new System.Windows.Forms.GroupBox();
@@ -72,7 +72,6 @@ namespace HMS
             this.button4.TabIndex = 3;
             this.button4.Text = "Clear";
             this.button4.UseVisualStyleBackColor = false;
-            this.button4.Click += new System.EventHandler(this.button4_Click);
             // 
             // button3
             // 
@@ -86,7 +85,6 @@ namespace HMS
             this.button3.TabIndex = 2;
             this.button3.Text = "Delete";
             this.button3.UseVisualStyleBackColor = false;
-            this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
             // button1
             // 
@@ -100,7 +98,6 @@ namespace HMS
             this.button1.TabIndex = 0;
             this.button1.Text = "Add";
             this.button1.UseVisualStyleBackColor = false;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // tableLayoutPanel3
             // 
@@ -121,7 +118,6 @@ namespace HMS
             this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 55F));
             this.tableLayoutPanel3.Size = new System.Drawing.Size(1143, 55);
             this.tableLayoutPanel3.TabIndex = 2;
-            this.tableLayoutPanel3.Paint += new System.Windows.Forms.PaintEventHandler(this.tableLayoutPanel3_Paint);
             // 
             // button2
             // 
@@ -135,7 +131,6 @@ namespace HMS
             this.button2.TabIndex = 1;
             this.button2.Text = "Edit";
             this.button2.UseVisualStyleBackColor = false;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // textBox5
             // 
@@ -144,7 +139,6 @@ namespace HMS
             this.textBox5.Name = "textBox5";
             this.textBox5.Size = new System.Drawing.Size(365, 27);
             this.textBox5.TabIndex = 9;
-            this.textBox5.TextChanged += new System.EventHandler(this.textBox5_TextChanged);
             // 
             // label5
             // 
@@ -155,7 +149,6 @@ namespace HMS
             this.label5.Size = new System.Drawing.Size(80, 40);
             this.label5.TabIndex = 8;
             this.label5.Text = "Medical History";
-            this.label5.Click += new System.EventHandler(this.label5_Click);
             // 
             // tableLayoutPanel2
             // 
@@ -172,7 +165,7 @@ namespace HMS
             this.tableLayoutPanel2.Controls.Add(this.textBox2, 3, 0);
             this.tableLayoutPanel2.Controls.Add(this.label2, 2, 0);
             this.tableLayoutPanel2.Controls.Add(this.label1, 0, 0);
-            this.tableLayoutPanel2.Controls.Add(this.comboBox1, 1, 0);
+            this.tableLayoutPanel2.Controls.Add(this.patient_box, 1, 0);
             this.tableLayoutPanel2.Controls.Add(this.label7, 2, 1);
             this.tableLayoutPanel2.Controls.Add(this.gender_box, 3, 1);
             this.tableLayoutPanel2.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -184,7 +177,6 @@ namespace HMS
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 24.99984F));
             this.tableLayoutPanel2.Size = new System.Drawing.Size(1143, 252);
             this.tableLayoutPanel2.TabIndex = 0;
-            this.tableLayoutPanel2.Paint += new System.Windows.Forms.PaintEventHandler(this.tableLayoutPanel2_Paint);
             // 
             // textBox3
             // 
@@ -193,7 +185,6 @@ namespace HMS
             this.textBox3.Name = "textBox3";
             this.textBox3.Size = new System.Drawing.Size(365, 27);
             this.textBox3.TabIndex = 5;
-            this.textBox3.TextChanged += new System.EventHandler(this.textBox3_TextChanged);
             // 
             // label3
             // 
@@ -204,7 +195,6 @@ namespace HMS
             this.label3.Size = new System.Drawing.Size(111, 20);
             this.label3.TabIndex = 4;
             this.label3.Text = "Prescription";
-            this.label3.Click += new System.EventHandler(this.label3_Click);
             // 
             // textBox2
             // 
@@ -213,7 +203,6 @@ namespace HMS
             this.textBox2.Name = "textBox2";
             this.textBox2.Size = new System.Drawing.Size(365, 27);
             this.textBox2.TabIndex = 3;
-            this.textBox2.TextChanged += new System.EventHandler(this.textBox2_TextChanged);
             // 
             // label2
             // 
@@ -224,7 +213,6 @@ namespace HMS
             this.label2.Size = new System.Drawing.Size(93, 20);
             this.label2.TabIndex = 2;
             this.label2.Text = "Diagnosis";
-            this.label2.Click += new System.EventHandler(this.label2_Click);
             // 
             // label1
             // 
@@ -235,20 +223,15 @@ namespace HMS
             this.label1.Size = new System.Drawing.Size(68, 20);
             this.label1.TabIndex = 0;
             this.label1.Text = "Patient";
-            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
-            // comboBox1
+            // patient_box
             // 
-            this.comboBox1.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Items.AddRange(new object[] {
-            "Male",
-            "Female"});
-            this.comboBox1.Location = new System.Drawing.Point(145, 29);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(365, 28);
-            this.comboBox1.TabIndex = 18;
-            this.comboBox1.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
+            this.patient_box.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.patient_box.FormattingEnabled = true;
+            this.patient_box.Location = new System.Drawing.Point(145, 29);
+            this.patient_box.Name = "patient_box";
+            this.patient_box.Size = new System.Drawing.Size(365, 28);
+            this.patient_box.TabIndex = 18;
             // 
             // label7
             // 
@@ -259,20 +242,18 @@ namespace HMS
             this.label7.Size = new System.Drawing.Size(110, 20);
             this.label7.TabIndex = 12;
             this.label7.Text = "Lab Results";
-            this.label7.Click += new System.EventHandler(this.label7_Click);
             // 
             // gender_box
             // 
             this.gender_box.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.gender_box.FormattingEnabled = true;
             this.gender_box.Items.AddRange(new object[] {
-            "Male",
-            "Female"});
+            "Pass",
+            "Fail"});
             this.gender_box.Location = new System.Drawing.Point(715, 113);
             this.gender_box.Name = "gender_box";
             this.gender_box.Size = new System.Drawing.Size(365, 28);
             this.gender_box.TabIndex = 15;
-            this.gender_box.SelectedIndexChanged += new System.EventHandler(this.gender_box_SelectedIndexChanged);
             // 
             // doctor_group
             // 
@@ -288,7 +269,6 @@ namespace HMS
             this.doctor_group.TabIndex = 2;
             this.doctor_group.TabStop = false;
             this.doctor_group.Text = "Medical Records";
-            this.doctor_group.Enter += new System.EventHandler(this.doctor_group_Enter);
             // 
             // tableLayoutPanel1
             // 
@@ -318,7 +298,6 @@ namespace HMS
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
             this.tableLayoutPanel1.Size = new System.Drawing.Size(1149, 706);
             this.tableLayoutPanel1.TabIndex = 47;
-            this.tableLayoutPanel1.Paint += new System.Windows.Forms.PaintEventHandler(this.tableLayoutPanel1_Paint);
             // 
             // dataGridView1
             // 
@@ -337,7 +316,6 @@ namespace HMS
             this.dataGridView1.RowTemplate.Height = 24;
             this.dataGridView1.Size = new System.Drawing.Size(1143, 381);
             this.dataGridView1.TabIndex = 18;
-            this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
             // Firstname
             // 
@@ -414,7 +392,7 @@ namespace HMS
         private System.Windows.Forms.GroupBox doctor_group;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
         private System.Windows.Forms.DataGridView dataGridView1;
-        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.ComboBox patient_box;
         private System.Windows.Forms.DataGridViewTextBoxColumn Firstname;
         private System.Windows.Forms.DataGridViewTextBoxColumn Lastname;
         private System.Windows.Forms.DataGridViewTextBoxColumn Address;

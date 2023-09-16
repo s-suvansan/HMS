@@ -31,21 +31,21 @@ namespace HMS
         {
             this.label6 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
-            this.comboBox2 = new System.Windows.Forms.ComboBox();
+            this.patient_box = new System.Windows.Forms.ComboBox();
             this.doctor_group = new System.Windows.Forms.GroupBox();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
             this.label2 = new System.Windows.Forms.Label();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
-            this.spec_box = new System.Windows.Forms.TextBox();
+            this.appoint_date_box = new System.Windows.Forms.DateTimePicker();
+            this.bill_box = new System.Windows.Forms.TextBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.status_box = new System.Windows.Forms.ComboBox();
             this.tableLayoutPanel3 = new System.Windows.Forms.TableLayoutPanel();
             this.button4 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.dataGridView2 = new System.Windows.Forms.DataGridView();
-            this.label1 = new System.Windows.Forms.Label();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.Lastname = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ContactNumber = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Address = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -66,7 +66,6 @@ namespace HMS
             this.label6.Size = new System.Drawing.Size(83, 20);
             this.label6.TabIndex = 18;
             this.label6.Text = "Bill Date";
-            this.label6.Click += new System.EventHandler(this.label6_Click);
             // 
             // label3
             // 
@@ -78,17 +77,14 @@ namespace HMS
             this.label3.TabIndex = 19;
             this.label3.Text = "Bill Amount";
             // 
-            // comboBox2
+            // patient_box
             // 
-            this.comboBox2.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.comboBox2.FormattingEnabled = true;
-            this.comboBox2.Items.AddRange(new object[] {
-            "Scheduled",
-            "Unscheduled"});
-            this.comboBox2.Location = new System.Drawing.Point(145, 49);
-            this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Size = new System.Drawing.Size(365, 28);
-            this.comboBox2.TabIndex = 21;
+            this.patient_box.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.patient_box.FormattingEnabled = true;
+            this.patient_box.Location = new System.Drawing.Point(145, 49);
+            this.patient_box.Name = "patient_box";
+            this.patient_box.Size = new System.Drawing.Size(365, 28);
+            this.patient_box.TabIndex = 21;
             // 
             // doctor_group
             // 
@@ -132,13 +128,13 @@ namespace HMS
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 12.5F));
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 37.5F));
             this.tableLayoutPanel2.Controls.Add(this.label2, 0, 0);
-            this.tableLayoutPanel2.Controls.Add(this.comboBox2, 1, 0);
+            this.tableLayoutPanel2.Controls.Add(this.patient_box, 1, 0);
             this.tableLayoutPanel2.Controls.Add(this.label6, 0, 1);
-            this.tableLayoutPanel2.Controls.Add(this.dateTimePicker1, 1, 1);
+            this.tableLayoutPanel2.Controls.Add(this.appoint_date_box, 1, 1);
             this.tableLayoutPanel2.Controls.Add(this.label3, 2, 0);
-            this.tableLayoutPanel2.Controls.Add(this.spec_box, 3, 0);
+            this.tableLayoutPanel2.Controls.Add(this.bill_box, 3, 0);
             this.tableLayoutPanel2.Controls.Add(this.label1, 2, 1);
-            this.tableLayoutPanel2.Controls.Add(this.comboBox1, 3, 1);
+            this.tableLayoutPanel2.Controls.Add(this.status_box, 3, 1);
             this.tableLayoutPanel2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel2.Location = new System.Drawing.Point(3, 3);
             this.tableLayoutPanel2.Name = "tableLayoutPanel2";
@@ -158,21 +154,44 @@ namespace HMS
             this.label2.TabIndex = 2;
             this.label2.Text = "Patient";
             // 
-            // dateTimePicker1
+            // appoint_date_box
             // 
-            this.dateTimePicker1.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.dateTimePicker1.Location = new System.Drawing.Point(145, 175);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(365, 27);
-            this.dateTimePicker1.TabIndex = 16;
+            this.appoint_date_box.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.appoint_date_box.Location = new System.Drawing.Point(145, 175);
+            this.appoint_date_box.Name = "appoint_date_box";
+            this.appoint_date_box.Size = new System.Drawing.Size(365, 27);
+            this.appoint_date_box.TabIndex = 16;
             // 
-            // spec_box
+            // bill_box
             // 
-            this.spec_box.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.spec_box.Location = new System.Drawing.Point(715, 49);
-            this.spec_box.Name = "spec_box";
-            this.spec_box.Size = new System.Drawing.Size(365, 27);
-            this.spec_box.TabIndex = 22;
+            this.bill_box.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.bill_box.Location = new System.Drawing.Point(715, 49);
+            this.bill_box.Name = "bill_box";
+            this.bill_box.Size = new System.Drawing.Size(365, 27);
+            this.bill_box.TabIndex = 22;
+            // 
+            // label1
+            // 
+            this.label1.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(573, 169);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(87, 40);
+            this.label1.TabIndex = 23;
+            this.label1.Text = "Payment Status";
+            // 
+            // status_box
+            // 
+            this.status_box.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.status_box.FormattingEnabled = true;
+            this.status_box.Items.AddRange(new object[] {
+            "Paid",
+            "Unpaid",
+            "Partially Paid"});
+            this.status_box.Location = new System.Drawing.Point(715, 175);
+            this.status_box.Name = "status_box";
+            this.status_box.Size = new System.Drawing.Size(365, 28);
+            this.status_box.TabIndex = 24;
             // 
             // tableLayoutPanel3
             // 
@@ -263,28 +282,6 @@ namespace HMS
             this.dataGridView2.Size = new System.Drawing.Size(1143, 381);
             this.dataGridView2.TabIndex = 4;
             // 
-            // label1
-            // 
-            this.label1.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(573, 169);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(87, 40);
-            this.label1.TabIndex = 23;
-            this.label1.Text = "Payment Status";
-            // 
-            // comboBox1
-            // 
-            this.comboBox1.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Items.AddRange(new object[] {
-            "Scheduled",
-            "Unscheduled"});
-            this.comboBox1.Location = new System.Drawing.Point(715, 175);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(365, 28);
-            this.comboBox1.TabIndex = 24;
-            // 
             // Lastname
             // 
             this.Lastname.HeaderText = "Patient";
@@ -336,21 +333,21 @@ namespace HMS
         #endregion
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.ComboBox comboBox2;
+        private System.Windows.Forms.ComboBox patient_box;
         private System.Windows.Forms.GroupBox doctor_group;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel2;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.DateTimePicker dateTimePicker1;
+        private System.Windows.Forms.DateTimePicker appoint_date_box;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel3;
         private System.Windows.Forms.Button button4;
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.DataGridView dataGridView2;
-        private System.Windows.Forms.TextBox spec_box;
+        private System.Windows.Forms.TextBox bill_box;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.ComboBox status_box;
         private System.Windows.Forms.DataGridViewTextBoxColumn Lastname;
         private System.Windows.Forms.DataGridViewTextBoxColumn ContactNumber;
         private System.Windows.Forms.DataGridViewTextBoxColumn Address;

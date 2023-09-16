@@ -44,16 +44,16 @@ namespace HMS
             this.doc_box = new System.Windows.Forms.ComboBox();
             this.patient_box = new System.Windows.Forms.ComboBox();
             this.tableLayoutPanel3 = new System.Windows.Forms.TableLayoutPanel();
-            this.dataGridView2 = new System.Windows.Forms.DataGridView();
-            this.doctor_group = new System.Windows.Forms.GroupBox();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.Doctor = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Patient = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Date = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Status = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.doctor_group = new System.Windows.Forms.GroupBox();
             this.tableLayoutPanel1.SuspendLayout();
             this.tableLayoutPanel2.SuspendLayout();
             this.tableLayoutPanel3.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.doctor_group.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -69,6 +69,7 @@ namespace HMS
             this.button1.TabIndex = 0;
             this.button1.Text = "Add";
             this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // label2
             // 
@@ -92,6 +93,7 @@ namespace HMS
             this.button4.TabIndex = 3;
             this.button4.Text = "Clear";
             this.button4.UseVisualStyleBackColor = false;
+            this.button4.Click += new System.EventHandler(this.button4_Click);
             // 
             // button3
             // 
@@ -105,6 +107,7 @@ namespace HMS
             this.button3.TabIndex = 2;
             this.button3.Text = "Delete";
             this.button3.UseVisualStyleBackColor = false;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
             // button2
             // 
@@ -118,6 +121,7 @@ namespace HMS
             this.button2.TabIndex = 1;
             this.button2.Text = "Edit";
             this.button2.UseVisualStyleBackColor = false;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // label1
             // 
@@ -143,7 +147,7 @@ namespace HMS
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.tableLayoutPanel1.Controls.Add(this.tableLayoutPanel2, 0, 0);
             this.tableLayoutPanel1.Controls.Add(this.tableLayoutPanel3, 0, 2);
-            this.tableLayoutPanel1.Controls.Add(this.dataGridView2, 0, 1);
+            this.tableLayoutPanel1.Controls.Add(this.dataGridView1, 0, 1);
             this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel1.Location = new System.Drawing.Point(3, 23);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
@@ -206,7 +210,8 @@ namespace HMS
             this.status_box.FormattingEnabled = true;
             this.status_box.Items.AddRange(new object[] {
             "Scheduled",
-            "Unscheduled"});
+            "Completed",
+            "Canceled"});
             this.status_box.Location = new System.Drawing.Point(715, 176);
             this.status_box.Name = "status_box";
             this.status_box.Size = new System.Drawing.Size(365, 28);
@@ -216,25 +221,21 @@ namespace HMS
             // 
             this.doc_box.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.doc_box.FormattingEnabled = true;
-            this.doc_box.Items.AddRange(new object[] {
-            "Scheduled",
-            "Unscheduled"});
             this.doc_box.Location = new System.Drawing.Point(145, 50);
             this.doc_box.Name = "doc_box";
             this.doc_box.Size = new System.Drawing.Size(365, 28);
             this.doc_box.TabIndex = 20;
+            this.doc_box.SelectedIndexChanged += new System.EventHandler(this.doc_box_SelectedIndexChanged);
             // 
             // patient_box
             // 
             this.patient_box.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.patient_box.FormattingEnabled = true;
-            this.patient_box.Items.AddRange(new object[] {
-            "Scheduled",
-            "Unscheduled"});
             this.patient_box.Location = new System.Drawing.Point(715, 50);
             this.patient_box.Name = "patient_box";
             this.patient_box.Size = new System.Drawing.Size(365, 28);
             this.patient_box.TabIndex = 21;
+            this.patient_box.SelectedIndexChanged += new System.EventHandler(this.patient_box_SelectedIndexChanged);
             // 
             // tableLayoutPanel3
             // 
@@ -256,37 +257,23 @@ namespace HMS
             this.tableLayoutPanel3.Size = new System.Drawing.Size(1143, 55);
             this.tableLayoutPanel3.TabIndex = 2;
             // 
-            // dataGridView2
+            // dataGridView1
             // 
-            this.dataGridView2.BackgroundColor = System.Drawing.Color.WhiteSmoke;
-            this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView2.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dataGridView1.BackgroundColor = System.Drawing.Color.WhiteSmoke;
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Doctor,
             this.Patient,
             this.Date,
             this.Status});
-            this.dataGridView2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dataGridView2.Location = new System.Drawing.Point(3, 261);
-            this.dataGridView2.Name = "dataGridView2";
-            this.dataGridView2.RowHeadersWidth = 51;
-            this.dataGridView2.RowTemplate.Height = 24;
-            this.dataGridView2.Size = new System.Drawing.Size(1143, 381);
-            this.dataGridView2.TabIndex = 4;
-            // 
-            // doctor_group
-            // 
-            this.doctor_group.BackColor = System.Drawing.Color.Transparent;
-            this.doctor_group.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.doctor_group.CausesValidation = false;
-            this.doctor_group.Controls.Add(this.tableLayoutPanel1);
-            this.doctor_group.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.doctor_group.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.doctor_group.Location = new System.Drawing.Point(0, 0);
-            this.doctor_group.Name = "doctor_group";
-            this.doctor_group.Size = new System.Drawing.Size(1155, 732);
-            this.doctor_group.TabIndex = 2;
-            this.doctor_group.TabStop = false;
-            this.doctor_group.Text = "Appoinments";
+            this.dataGridView1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dataGridView1.Location = new System.Drawing.Point(3, 261);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.RowHeadersWidth = 51;
+            this.dataGridView1.RowTemplate.Height = 24;
+            this.dataGridView1.Size = new System.Drawing.Size(1143, 381);
+            this.dataGridView1.TabIndex = 4;
+            this.dataGridView1.RowHeaderMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dataGridView1_RowHeaderMouseClick);
             // 
             // Doctor
             // 
@@ -316,6 +303,21 @@ namespace HMS
             this.Status.Name = "Status";
             this.Status.Width = 125;
             // 
+            // doctor_group
+            // 
+            this.doctor_group.BackColor = System.Drawing.Color.Transparent;
+            this.doctor_group.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.doctor_group.CausesValidation = false;
+            this.doctor_group.Controls.Add(this.tableLayoutPanel1);
+            this.doctor_group.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.doctor_group.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.doctor_group.Location = new System.Drawing.Point(0, 0);
+            this.doctor_group.Name = "doctor_group";
+            this.doctor_group.Size = new System.Drawing.Size(1155, 732);
+            this.doctor_group.TabIndex = 2;
+            this.doctor_group.TabStop = false;
+            this.doctor_group.Text = "Appoinments";
+            // 
             // AppointmentScreen
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -329,7 +331,7 @@ namespace HMS
             this.tableLayoutPanel2.ResumeLayout(false);
             this.tableLayoutPanel2.PerformLayout();
             this.tableLayoutPanel3.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.doctor_group.ResumeLayout(false);
             this.ResumeLayout(false);
 
@@ -352,7 +354,7 @@ namespace HMS
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.ComboBox status_box;
         private System.Windows.Forms.ComboBox patient_box;
-        private System.Windows.Forms.DataGridView dataGridView2;
+        private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.DataGridViewTextBoxColumn Doctor;
         private System.Windows.Forms.DataGridViewTextBoxColumn Patient;
         private System.Windows.Forms.DataGridViewTextBoxColumn Date;

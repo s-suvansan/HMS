@@ -143,7 +143,7 @@ namespace HMS
                     "Username = '" + user_box.Text + "', " +
                     "Password = '" + selectedPwd + "', " +
                     "Role = '" + role_box.Text + "'" +
-                    "WHERE DoctorID = " + selectedIndex + ";";
+                    "WHERE StaffID = " + selectedIndex + ";";
                 int affected = con.ExecuteNonQuery(updateQuery);
                 con.Close();
                 if (affected != -1)
