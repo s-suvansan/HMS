@@ -351,9 +351,9 @@ namespace HMS
             this.ClientSize = new System.Drawing.Size(1182, 653);
             this.Controls.Add(this.tableLayoutPanel1);
             this.Font = new System.Drawing.Font("Times New Roman", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MinimumSize = new System.Drawing.Size(1200, 700);
             this.Name = "DashboardScreen";
-            this.ShowIcon = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "HealthCare Plus";
             this.tableLayoutPanel1.ResumeLayout(false);
