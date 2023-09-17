@@ -53,6 +53,7 @@ namespace HMS
 
         private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
+            this.Hide();
             RegisterScreen register = new RegisterScreen();
             register.Show();
         }

@@ -212,7 +212,7 @@ namespace HMS
             "Scheduled",
             "Completed",
             "Canceled"});
-            this.status_box.Location = new System.Drawing.Point(715, 176);
+            this.status_box.Location = new System.Drawing.Point(715, 175);
             this.status_box.Name = "status_box";
             this.status_box.Size = new System.Drawing.Size(365, 28);
             this.status_box.TabIndex = 15;
@@ -221,21 +221,23 @@ namespace HMS
             // 
             this.doc_box.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.doc_box.FormattingEnabled = true;
-            this.doc_box.Location = new System.Drawing.Point(145, 50);
+            this.doc_box.Location = new System.Drawing.Point(145, 49);
             this.doc_box.Name = "doc_box";
             this.doc_box.Size = new System.Drawing.Size(365, 28);
             this.doc_box.TabIndex = 20;
             this.doc_box.SelectedIndexChanged += new System.EventHandler(this.doc_box_SelectedIndexChanged);
+            this.doc_box.Click += new System.EventHandler(this.doc_box_Click);
             // 
             // patient_box
             // 
             this.patient_box.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.patient_box.FormattingEnabled = true;
-            this.patient_box.Location = new System.Drawing.Point(715, 50);
+            this.patient_box.Location = new System.Drawing.Point(715, 49);
             this.patient_box.Name = "patient_box";
             this.patient_box.Size = new System.Drawing.Size(365, 28);
             this.patient_box.TabIndex = 21;
             this.patient_box.SelectedIndexChanged += new System.EventHandler(this.patient_box_SelectedIndexChanged);
+            this.patient_box.Click += new System.EventHandler(this.patient_box_Click);
             // 
             // tableLayoutPanel3
             // 

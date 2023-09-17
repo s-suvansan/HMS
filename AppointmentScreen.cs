@@ -384,5 +384,22 @@ namespace HMS
             clearTextbox();
 
         }
+
+        private void doc_box_Click(object sender, EventArgs e)
+        {
+            ListDoctorID.Clear();
+
+            ListDoctorName.Clear();
+            doc_box.Items.Clear();
+            GetDoctors();
+        }
+
+        private void patient_box_Click(object sender, EventArgs e)
+        {
+            ListPatientID.Clear();
+            ListPatientName.Clear();
+            patient_box.Items.Clear();
+            GetPatients();
+        }
     }
 }
